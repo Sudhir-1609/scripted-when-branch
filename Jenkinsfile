@@ -1,12 +1,12 @@
 node {
-        stage('Build Master') {
-            if(env.BRANCH_NAME == 'master'){
+        if(env.BRANCH_NAME == 'master'){
+			stage('Build Master') {
                 echo 'Building master'
             }
         }
 		
-        stage('Build Dev') {
-            if(env.BRANCH_NAME == 'dev'){
+		if(env.BRANCH_NAME == 'dev'){
+			stage('Build Dev') {            
                 echo 'Building dev'
             }
         }
